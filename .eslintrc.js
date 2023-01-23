@@ -16,7 +16,7 @@ module.exports = {
       'error',
       { functions: 'never', arrays: 'always-multiline', objects: 'always-multiline' },
     ],
-    'max-len': ['error', { code: 100, comments: 120 }],
+    'max-len': ['warn', { code: 100, comments: 120 }],
     'newline-per-chained-call': ['error', { ignoreChainWithDepth: 2 }],
     'object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
     'prefer-const': 'off',

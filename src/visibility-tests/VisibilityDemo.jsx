@@ -3,7 +3,8 @@ import './VisibilityDemo.css';
 
 function VisibilityDemo() {
   const [domPresent, setDOMPresent] = useState(true);
-  const [visible, setVisible] = useState('visible'); // possible values are 'visible', 'hidden', 'collapse'
+  // possible values are 'visible', 'hidden', 'collapse'
+  const [visible, setVisible] = useState('visible');
   const [displayValue, setDisplayValue] = useState('block');
   const [opaque, setOpacity] = useState(1.0);
   const [hidden, setHidden] = useState(false);
@@ -19,8 +20,7 @@ function VisibilityDemo() {
           </div>
           <button
             className="btn btn-sm btn-primary"
-            onClick={() => setDOMPresent(!domPresent)}
-          >
+            onClick={() => setDOMPresent(!domPresent)}>
             Toggle DOM
           </button>
         </div>
@@ -31,8 +31,7 @@ function VisibilityDemo() {
           </div>
           <button
             className="btn btn-sm btn-primary"
-            onClick={() => setVisible(visible === 'visible' ? 'hidden' : 'visible')}
-          >
+            onClick={() => setVisible(visible === 'visible' ? 'hidden' : 'visible')}>
             Toggle Visibility
           </button>
         </div>
@@ -43,8 +42,7 @@ function VisibilityDemo() {
           </div>
           <button
             className="btn btn-sm btn-primary"
-            onClick={() => setDisplayValue(displayValue === 'block' ? 'none' : 'block')}
-          >
+            onClick={() => setDisplayValue(displayValue === 'block' ? 'none' : 'block')}>
             Toggle Display
           </button>
         </div>
@@ -57,8 +55,7 @@ function VisibilityDemo() {
           </div>
           <button
             className="btn btn-sm btn-primary"
-            onClick={() => setOpacity(opaque === 1 ? 0 : 1)}
-          >
+            onClick={() => setOpacity(opaque === 1 ? 0 : 1)}>
             Toggle Opacity
           </button>
         </div>
