@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import ErrorBoundaryDemo from './error-boundaries/ErrorBoundaryDemo';
 import CancelPromise from './cancel-promise/CancelPromise';
@@ -49,7 +50,9 @@ function App() {
                 <Link to="redux-counter">Redux Counter</Link>
               </li>
               <li>
-                <Link to="redux-counter-best-practices">Redux Counter (best practices)</Link>
+                <Link to="redux-counter-best-practices">
+                  Redux Counter (best practices)
+                </Link>
               </li>
               <li>
                 <Link to="redux-toolkit-counter">Redux Counter (using the toolkit)</Link>
