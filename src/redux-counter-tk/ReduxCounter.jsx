@@ -3,7 +3,7 @@ import Counter from './Counter';
 import { increment, decrement } from './counter-slice';
 
 const mapStateToProps = (state) => ({
-  value: state,
+	value: state,
 });
 
 /*
@@ -23,8 +23,8 @@ onClick={() => callSomeAction(someValue)}
 So there is no real fix for this particular issue.
 */
 const mapDispatchToProps = (dispatch) => ({
-  increment: () => dispatch(increment()),
-  decrement: () => dispatch(decrement()),
+	increment: () => dispatch(increment()),
+	decrement: () => dispatch(decrement()),
 });
 
 const ReduxCounter = connect(mapStateToProps, mapDispatchToProps)(Counter);

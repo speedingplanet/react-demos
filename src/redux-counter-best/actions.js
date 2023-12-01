@@ -1,7 +1,7 @@
 // Action types
 export const actions = {
-  INCREMENT: 'INCREMENT',
-  DECREMENT: 'DECREMENT',
+	INCREMENT: 'INCREMENT',
+	DECREMENT: 'DECREMENT',
 };
 
 // Action creators

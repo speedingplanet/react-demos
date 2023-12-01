@@ -3,12 +3,12 @@ import Counter from './Counter';
 import { addOne, subtractOne } from './actions';
 
 const mapStateToProps = (state) => ({
-  value: state.counter,
+	value: state.counter,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  increment: () => dispatch(addOne()),
-  decrement: () => dispatch(subtractOne()),
+	increment: () => dispatch(addOne()),
+	decrement: () => dispatch(subtractOne()),
 });
 
 const ReduxCounter = connect(mapStateToProps, mapDispatchToProps)(Counter);
