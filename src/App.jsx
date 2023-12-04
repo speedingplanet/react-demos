@@ -10,6 +10,7 @@ import ReduxCounter from './redux-counter/ReduxCounter.jsx';
 import ReduxCounterBP from './redux-counter-best/ReduxContainer.jsx';
 import ReduxToolkitCounter from './redux-counter-tk/ReduxContainer.jsx';
 import VisibilityDemo from './visibility-tests/VisibilityDemo.jsx';
+import BasicComponent from './testing/BasicComponent';
 
 function App() {
 	return (
@@ -58,6 +59,9 @@ function App() {
 							<li>
 								<Link to="visibility-demo">Visbility Demo</Link>
 							</li>
+							<li>
+								<Link to="testable-component">Testable component</Link>
+							</li>
 						</ul>
 					</div>
 					<div className="col">
@@ -97,6 +101,10 @@ function App() {
 							<Route
 								path="/redux-toolkit-counter"
 								element={<ReduxToolkitCounter />}
+							/>
+							<Route
+								path="/testable-component"
+								element={<BasicComponent />}
 							/>
 							<Route
 								path="/"

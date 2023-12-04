@@ -55,3 +55,10 @@ it('should allow access via a test id', () => {
 	render(<BasicComponent />);
 	expect(screen.getByTestId('oranges')).not.toBeNull();
 });
+
+it("should access a form field via the field's label", () => {
+	render(<BasicComponent />);
+	let formField = screen.getByLabelText(/favorite/i);
+	expect(formField).toBeInTheDocument();
+	expect(formField).toBeVisible();
+});
