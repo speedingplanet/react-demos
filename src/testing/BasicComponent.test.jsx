@@ -1,6 +1,7 @@
 import React from 'react';
 import { it, test, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import BasicComponent from './BasicComponent';
 
 it('Smoke test (it)', () => {
@@ -61,4 +62,19 @@ it("should access a form field via the field's label", () => {
 	let formField = screen.getByLabelText(/favorite/i);
 	expect(formField).toBeInTheDocument();
 	expect(formField).toBeVisible();
+});
+
+it('should respond to content typed into a form field', async () => {
+	const { container } = render(<BasicComponent />);
+	let formField = screen.getByLabelText(/favorite/i);
+	expect(formField).toHaveValue('');
+
+	let lastItem = container.querySelector('li:last-child');
+	expect(lastItem).toHaveTextContent('');
+
+	let fruit = 'Lemons';
+	await userEvent.type(formField, fruit);
+	expect(formField).toHaveValue(fruit);
+	expect(lastItem).toHaveTextContent(fruit);
+	expect(screen.getByText(fruit)).toBeInTheDocument();
 });
