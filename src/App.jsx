@@ -123,7 +123,7 @@ function App() {
 								element={<IterativeContent />}
 							/>
 							<Route
-								path="/"
+								path="/visibility-demo"
 								element={<VisibilityDemo />}
 							/>
 						</Routes>
