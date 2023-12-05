@@ -1,31 +1,32 @@
 import React, { useState } from 'react';
 import FormDataDisplay from './FormDataDisplay';
 
-function FormDataControlledComponents() {
+function FormDataUtilityHandler() {
 	const [firstName, setFirstName] = useState('');
 	const [lastName, setLastName] = useState('');
 	const [city, setCity] = useState('');
 	const [state, setState] = useState('');
 
-	function handleFirstNameChange(event) {
-		setFirstName(event.currentTarget.value);
-	}
-
-	function handleLastNameChange(event) {
-		setLastName(event.currentTarget.value);
-	}
-
-	function handleCityChange(event) {
-		setCity(event.currentTarget.value);
-	}
-
-	function handleStateChange(event) {
-		setState(event.currentTarget.value);
+	function handleFormUpdate(field, value) {
+		switch (field) {
+			case 'firstName':
+				setFirstName(value);
+				break;
+			case 'lastName':
+				setLastName(value);
+				break;
+			case 'city':
+				setCity(value);
+				break;
+			case 'state':
+				setState(value);
+				break;
+		}
 	}
 
 	return (
 		<>
-			<h3>Controlled Components</h3>
+			<h3>Utility event handler</h3>
 			<div className="row">
 				<div className="col">
 					<form>
@@ -39,7 +40,9 @@ function FormDataControlledComponents() {
 								name="first-name"
 								id="first-name"
 								value={firstName}
-								onChange={handleFirstNameChange}
+								onChange={(event) =>
+									handleFormUpdate('firstName', event.currentTarget.value)
+								}
 							/>
 						</div>
 						{/* Last Name */}
@@ -52,7 +55,9 @@ function FormDataControlledComponents() {
 								name="last-name"
 								id="last-name"
 								value={lastName}
-								onChange={handleLastNameChange}
+								onChange={(event) =>
+									handleFormUpdate('lastName', event.currentTarget.value)
+								}
 							/>
 						</div>
 						{/* City */}
@@ -65,7 +70,9 @@ function FormDataControlledComponents() {
 								name="city"
 								id="city"
 								value={city}
-								onChange={handleCityChange}
+								onChange={(event) =>
+									handleFormUpdate('city', event.currentTarget.value)
+								}
 							/>
 						</div>
 						{/* State */}
@@ -78,7 +85,9 @@ function FormDataControlledComponents() {
 								name="state"
 								id="state"
 								value={state}
-								onChange={handleStateChange}
+								onChange={(event) =>
+									handleFormUpdate('state', event.currentTarget.value)
+								}
 							/>
 						</div>
 					</form>
@@ -96,4 +105,4 @@ function FormDataControlledComponents() {
 	);
 }
 
-export default FormDataControlledComponents;
+export default FormDataUtilityHandler;

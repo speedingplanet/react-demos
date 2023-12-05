@@ -12,7 +12,7 @@ import ReduxToolkitCounter from './redux-counter-tk/ReduxContainer.jsx';
 import VisibilityDemo from './visibility-tests/VisibilityDemo.jsx';
 import BasicComponent from './testing/BasicComponent';
 import IterativeContent from './iterative-content/IterativeContent.jsx';
-import FormDataControlledComponents from './form-data/FormDataControlledComponents';
+import FormDataManager from './form-data/FormDataManager';
 
 function App() {
 	return (
@@ -25,10 +25,10 @@ function App() {
 			</header>
 			<BrowserRouter>
 				<div className="row">
-					<div className="col">
+					<div className="col-3">
 						<ul className="list-unstyled">
 							<li>
-								<Link to="form-data">Form Data</Link>
+								<Link to="form-data">Form Data examples</Link>
 							</li>
 							<li>
 								<Link to="cancel-promise">Cancel Promises (axios)</Link>
@@ -75,8 +75,8 @@ function App() {
 					<div className="col">
 						<Routes>
 							<Route
-								path="/form-data"
-								element={<FormDataControlledComponents />}
+								path="/form-data/*"
+								element={<FormDataManager />}
 							/>
 							<Route
 								path="/cancel-promise"
