@@ -12,6 +12,7 @@ import ReduxToolkitCounter from './redux-counter-tk/ReduxContainer.jsx';
 import VisibilityDemo from './visibility-tests/VisibilityDemo.jsx';
 import BasicComponent from './testing/BasicComponent';
 import IterativeContent from './iterative-content/IterativeContent.jsx';
+import FormDataControlledComponents from './form-data/FormDataControlledComponents';
 
 function App() {
 	return (
@@ -26,6 +27,9 @@ function App() {
 				<div className="row">
 					<div className="col">
 						<ul className="list-unstyled">
+							<li>
+								<Link to="form-data">Form Data</Link>
+							</li>
 							<li>
 								<Link to="cancel-promise">Cancel Promises (axios)</Link>
 							</li>
@@ -70,6 +74,10 @@ function App() {
 					</div>
 					<div className="col">
 						<Routes>
+							<Route
+								path="/form-data"
+								element={<FormDataControlledComponents />}
+							/>
 							<Route
 								path="/cancel-promise"
 								element={<CancelPromise />}
