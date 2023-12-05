@@ -11,6 +11,7 @@ import ReduxCounterBP from './redux-counter-best/ReduxContainer.jsx';
 import ReduxToolkitCounter from './redux-counter-tk/ReduxContainer.jsx';
 import VisibilityDemo from './visibility-tests/VisibilityDemo.jsx';
 import BasicComponent from './testing/BasicComponent';
+import IterativeContent from './iterative-content/IterativeContent.jsx';
 
 function App() {
 	return (
@@ -62,6 +63,9 @@ function App() {
 							<li>
 								<Link to="testable-component">Testable component</Link>
 							</li>
+							<li>
+								<Link to="iterative-content">Iterative content</Link>
+							</li>
 						</ul>
 					</div>
 					<div className="col">
@@ -105,6 +109,10 @@ function App() {
 							<Route
 								path="/testable-component"
 								element={<BasicComponent />}
+							/>
+							<Route
+								path="/iterative-content"
+								element={<IterativeContent />}
 							/>
 							<Route
 								path="/"
