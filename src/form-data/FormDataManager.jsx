@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import FormDataControlledComponents from './FormDataControlledComponents';
 import FormDataUtilityHandler from './FormDataUtilityHandler';
+import FormDataEventObject from './FormDataEventObject';
 
 function FormDataManager() {
 	return (
@@ -19,6 +20,11 @@ function FormDataManager() {
 								Controlled Components with a utility event handler
 							</Link>
 						</li>
+						<li>
+							<Link to="/form-data/event-object">
+								Uses only the event object to carry updates
+							</Link>
+						</li>
 					</ul>
 				</div>
 				<div className="col">
@@ -30,6 +36,10 @@ function FormDataManager() {
 						<Route
 							path="utility-event-handler"
 							element={<FormDataUtilityHandler />}
+						/>
+						<Route
+							path="event-object"
+							element={<FormDataEventObject />}
 						/>
 					</Routes>
 				</div>
