@@ -3,6 +3,7 @@ import { Link, Route, Routes } from 'react-router-dom';
 import FormDataControlledComponents from './FormDataControlledComponents';
 import FormDataUtilityHandler from './FormDataUtilityHandler';
 import FormDataEventObject from './FormDataEventObject';
+import FormDataSingleStateObject from './FormDataSingleStateObject';
 
 function FormDataManager() {
 	return (
@@ -25,6 +26,11 @@ function FormDataManager() {
 								Uses only the event object to carry updates
 							</Link>
 						</li>
+						<li>
+							<Link to="/form-data/single-state-object">
+								Single state object
+							</Link>
+						</li>
 					</ul>
 				</div>
 				<div className="col">
@@ -40,6 +46,10 @@ function FormDataManager() {
 						<Route
 							path="event-object"
 							element={<FormDataEventObject />}
+						/>
+						<Route
+							path="single-state-object"
+							element={<FormDataSingleStateObject />}
 						/>
 					</Routes>
 				</div>
