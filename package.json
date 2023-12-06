@@ -8,6 +8,7 @@
 		"build": "vite build",
 		"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview",
+		"rest-server": "json-server --port 7000 src/data/countries-table.json",
 		"test": "vitest"
 	},
 	"dependencies": {
@@ -34,6 +35,7 @@
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"eslint-plugin-react-refresh": "^0.4.4",
 		"jsdom": "^23.0.1",
+		"json-server": "^0.17.4",
 		"prettier": "^3.1.0",
 		"redux-devtools-extension": "^2.13.9",
 		"redux-logger": "^3.0.6",
