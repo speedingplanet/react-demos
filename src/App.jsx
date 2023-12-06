@@ -13,6 +13,7 @@ import VisibilityDemo from './visibility-tests/VisibilityDemo.jsx';
 import BasicComponent from './testing/BasicComponent';
 import IterativeContent from './iterative-content/IterativeContent.jsx';
 import FormDataManager from './form-data/FormDataManager';
+import IterativeContentManager from './iterative-content/IterativeContentManager';
 
 function App() {
 	return (
@@ -29,6 +30,9 @@ function App() {
 						<ul className="list-unstyled">
 							<li>
 								<Link to="form-data">Form Data examples</Link>
+							</li>
+							<li>
+								<Link to="iterative-content">Iterative content</Link>
 							</li>
 							<li>
 								<Link to="cancel-promise">Cancel Promises (axios)</Link>
@@ -67,9 +71,6 @@ function App() {
 							<li>
 								<Link to="testable-component">Testable component</Link>
 							</li>
-							<li>
-								<Link to="iterative-content">Iterative content</Link>
-							</li>
 						</ul>
 					</div>
 					<div className="col">
@@ -77,6 +78,10 @@ function App() {
 							<Route
 								path="/form-data/*"
 								element={<FormDataManager />}
+							/>
+							<Route
+								path="/iterative-content/*"
+								element={<IterativeContentManager />}
 							/>
 							<Route
 								path="/cancel-promise"
@@ -117,10 +122,6 @@ function App() {
 							<Route
 								path="/testable-component"
 								element={<BasicComponent />}
-							/>
-							<Route
-								path="/iterative-content"
-								element={<IterativeContent />}
 							/>
 							<Route
 								path="/visibility-demo"
