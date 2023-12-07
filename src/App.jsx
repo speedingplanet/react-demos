@@ -14,6 +14,8 @@ import BasicComponent from './testing/BasicComponent';
 import IterativeContent from './iterative-content/IterativeContent.jsx';
 import FormDataManager from './form-data/FormDataManager';
 import IterativeContentManager from './iterative-content/IterativeContentManager';
+import AsyncManager from './async-demos/AsyncManager.jsx';
+import PropsChildren from './PropsChildren.jsx';
 
 function App() {
 	return (
@@ -33,6 +35,14 @@ function App() {
 							</li>
 							<li>
 								<Link to="iterative-content">Iterative content</Link>
+							</li>
+							<li>
+								<Link to="async-demos">Async Demos</Link>
+							</li>
+							<li>
+								<Link to="props-children">
+									<code>children</code> property
+								</Link>
 							</li>
 							<li>
 								<Link to="cancel-promise">Cancel Promises (axios)</Link>
@@ -82,6 +92,14 @@ function App() {
 							<Route
 								path="/iterative-content/*"
 								element={<IterativeContentManager />}
+							/>
+							<Route
+								path="/async-demos/*"
+								element={<AsyncManager />}
+							/>
+							<Route
+								path="/props-children"
+								element={<PropsChildren />}
 							/>
 							<Route
 								path="/cancel-promise"
