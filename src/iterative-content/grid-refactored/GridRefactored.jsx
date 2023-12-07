@@ -2,7 +2,7 @@ import React from 'react';
 import { countries } from '../../data/countries-table.json';
 import '../GridExample.css';
 import GridHeaderRow from './GridHeaderRow';
-import GridBodyRow from './GridBodyRow';
+import GridBody from './GridBody';
 
 let columns = [
 	{
@@ -25,15 +25,10 @@ function GridRefactored() {
 			<h3>Countries and their population (refactored)</h3>
 			<div className="countries-grid">
 				<GridHeaderRow columns={columns} />
-				<div className="countries-grid-body">
-					{countries.map((country) => (
-						<GridBodyRow
-							key={country.id}
-							columns={columns}
-							country={country}
-						/>
-					))}
-				</div>
+				<GridBody
+					columns={columns}
+					countries={countries}
+				/>
 			</div>
 		</section>
 	);

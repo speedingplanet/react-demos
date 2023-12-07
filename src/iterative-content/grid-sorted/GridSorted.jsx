@@ -3,7 +3,7 @@ import { orderBy } from 'lodash';
 import { countries } from '../../data/countries-table.json';
 import '../GridExample.css';
 import GridHeaderRow from './GridHeaderRowSorted';
-import GridBodyRow from './GridBodyRowSorted';
+import GridBody from './GridBodySorted';
 
 let columns = [
 	{
@@ -60,15 +60,10 @@ function GridSorted() {
 					onHeaderClick={handleHeaderClick}
 					sortConfig={sortConfig}
 				/>
-				<div className="countries-grid-body">
-					{sortedCountries.map((country) => (
-						<GridBodyRow
-							key={country.id}
-							columns={columns}
-							country={country}
-						/>
-					))}
-				</div>
+				<GridBody
+					columns={columns}
+					countries={sortedCountries}
+				/>
 			</div>
 		</section>
 	);
