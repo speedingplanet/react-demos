@@ -6,6 +6,7 @@ function Promises() {
 
 	// One-time data request
 	useEffect(() => {
+		// fetch() returns a Promise
 		fetch(url)
 			.then((response) => {
 				if (response.ok) {
@@ -15,6 +16,7 @@ function Promises() {
 				}
 			})
 			.then((results) => {
+				console.log('Countries array:', results);
 				setCountries(results);
 			})
 			.catch((error) => {
