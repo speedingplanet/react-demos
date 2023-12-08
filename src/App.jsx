@@ -11,11 +11,11 @@ import ReduxCounterBP from './redux-counter-best/ReduxContainer.jsx';
 import ReduxToolkitCounter from './redux-counter-tk/ReduxContainer.jsx';
 import VisibilityDemo from './visibility-tests/VisibilityDemo.jsx';
 import BasicComponent from './testing/BasicComponent';
-import IterativeContent from './iterative-content/IterativeContent.jsx';
 import FormDataManager from './form-data/FormDataManager';
 import IterativeContentManager from './iterative-content/IterativeContentManager';
 import AsyncManager from './async-demos/AsyncManager.jsx';
 import PropsChildren from './PropsChildren.jsx';
+import ApolloManager from './apollo/ApolloManager.jsx';
 
 function App() {
 	return (
@@ -43,6 +43,9 @@ function App() {
 								<Link to="props-children">
 									<code>children</code> property
 								</Link>
+							</li>
+							<li>
+								<Link to="apollo">Apollo Demos</Link>
 							</li>
 							<li>
 								<Link to="cancel-promise">Cancel Promises (axios)</Link>
@@ -100,6 +103,10 @@ function App() {
 							<Route
 								path="/props-children"
 								element={<PropsChildren />}
+							/>
+							<Route
+								path="/apollo/*"
+								element={<ApolloManager />}
 							/>
 							<Route
 								path="/cancel-promise"
